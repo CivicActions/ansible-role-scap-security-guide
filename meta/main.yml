@@ -1,4 +1,5 @@
 ---
+
 galaxy_info:
   author: openprivacy
   description: Install the SCAP Security Guide.
@@ -12,7 +13,7 @@ galaxy_info:
   - name: CentOS
     versions:
     - all
-  categories:
+  galaxy_tags:
     - security
     - monitoring
     - content
