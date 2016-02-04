@@ -1,6 +1,6 @@
 ---
 
-# This is run as user govready
+# Install and compile the SCAP Security Guide (if not already present).
 
 - name: Install python-lxml (used by govready and SSG)
   yum:
@@ -12,8 +12,10 @@
   git:
     repo: "{{ ssg_repo }}"
     dest: "{{ ssg_repo_local_destination }}"
-    force: yes
+    clone: no
 
 - name: Compile SCAP Security Guide content for RHEL 7
-  command: chdir="{{ ssg_repo_local_destination }}" make "{{ ssg_os_version }}"
-
+  command: make "{{ ssg_os_version }}"
+  args:
+    chdir: "{{ ssg_repo_local_destination }}"
+    creates: "{{ ssg_creates }}"

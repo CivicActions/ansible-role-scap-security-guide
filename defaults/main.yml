@@ -2,3 +2,4 @@
 ssg_repo: "https://github.com/OpenSCAP/scap-security-guide.git"
 ssg_repo_local_destination: "/usr/local/scap-security-guide"
 ssg_os_version: "rhel7"
+ssg_creates: "/usr/local/scap-security-guide/RHEL/7/dist/content/ssg-rhel7-ds.xml"
