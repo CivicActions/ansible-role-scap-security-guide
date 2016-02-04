@@ -1,4 +1,4 @@
 ---
 ssg_repo: "https://github.com/OpenSCAP/scap-security-guide.git"
-ssg_repo_local_destination: "~/scap-security-guide"
+ssg_repo_local_destination: "/usr/local/scap-security-guide"
 ssg_os_version: "rhel7"

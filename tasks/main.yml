@@ -7,7 +7,6 @@
     pkg: python-lxml
     state: installed
   ignore_errors: true
-  become: yes
 
 - name: Clone SCAP Security Guide (SSG) repository 
   git:
@@ -16,5 +15,5 @@
     force: yes
 
 - name: Compile SCAP Security Guide content for RHEL 7
-  command: chdir="{{ ssg_repo }}" make "{{ ssg_os_version }}"
+  command: chdir="{{ ssg_repo_local_destination }}" make "{{ ssg_os_version }}"
 
