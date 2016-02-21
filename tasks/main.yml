@@ -12,7 +12,6 @@
   git:
     repo: "{{ ssg_repo }}"
     dest: "{{ ssg_repo_local_destination }}"
-    clone: no
 
 - name: Compile SCAP Security Guide content for RHEL 7
   command: make "{{ ssg_os_version }}"
