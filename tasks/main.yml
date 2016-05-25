@@ -2,10 +2,13 @@
 
 # Install and compile the SCAP Security Guide (if not already present).
 
-- name: Install python-lxml (used by govready and SSG)
+- name: Ensure git and python-lxml (used by govready and SSG) are installed.
   yum:
-    pkg: python-lxml
+    pkg: "{{ item }}"
     state: installed
+  with_items:
+    - python-lxml
+    - git
   ignore_errors: true
 
 - name: Clone SCAP Security Guide (SSG) repository 
